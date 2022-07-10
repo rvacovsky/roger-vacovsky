@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
@@ -8,26 +8,14 @@ import './App.css';
 function App() {
   return (
     <div>
-    <Nav
-      categories={categories}
-      setCurrentCategory={setCurrentCategory}
-      currentCategory={currentCategory}
-      contactSelected={contactSelected}
-      setContactSelected={setContactSelected}
-    ></Nav>
+    <Nav></Nav>
     <main>
-      {!contactSelected ? (
-        <>
           <About></About>
-          <Portfolio currentCategory={currentCategory}></Portfolio>
-        </>
-      ) : (
+          <Portfolio></Portfolio>
         <ContactForm></ContactForm>
-      )}
     </main>
   </div>
 );
-  );
 }
 
 export default App;
