@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Nav from '../Nav/';
+
 
 function Header() {
   return (
@@ -9,23 +10,7 @@ function Header() {
         <span>Roger Vacovsky</span> 
       </a>
     </h2>
-    <nav>
-      <NavLink exact activeClassName="active" to="/">
-        Home
-      </NavLink>
-      <NavLink activeClassName="active" to="./About">
-        About
-      </NavLink>
-      <NavLink activeClassName="active" to="./downloads/resume.pdf">
-        Resume
-      </NavLink>
-      <NavLink activeClassName="active" to="./Portfolio">
-        Portfolio
-      </NavLink>
-      <NavLink activeClassName="active" to="./Contact">
-        Contact
-      </NavLink>
-    </nav>
+    <Nav />
     </header>
   );
 }

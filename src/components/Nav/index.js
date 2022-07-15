@@ -1,26 +1,27 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 function Nav() {
 
   return (
     <header className="flex-row px-1">
-      <h2>
-        <a href="/">
-          <span>Roger Vacovsky</span> 
-        </a>
-      </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a href="#about">
-              About me
-            </a>
-          </li>
-          <li>
-            <span>Contact</span>
-          </li>
-        </ul>
-      </nav>
+    <nav>
+      <NavLink exact activeClassName="active" to="/">
+        Home
+      </NavLink>
+      <NavLink activeClassName="active" to="./About">
+        About
+      </NavLink>
+      <NavLink activeClassName="active" to="./downloads/resume.pdf">
+        Resume
+      </NavLink>
+      <NavLink activeClassName="active" to="./Portfolio">
+        Portfolio
+      </NavLink>
+      <NavLink activeClassName="active" to="./Contact">
+        Contact
+      </NavLink>
+    </nav>
     </header>
   );
 }
