@@ -4,25 +4,36 @@ import { NavLink } from "react-router-dom";
 function Nav() {
 
   return (
-    <header className="flex-row px-1">
     <nav>
-      <NavLink exact activeClassName="active" to="/">
+      <ul>
+      <li>
+      <NavLink activeclassname="active" to="/">
         Home
       </NavLink>
-      <NavLink activeClassName="active" to="./About">
+      </li>
+      <li>
+      <NavLink activeclassname="active" to="./About">
         About
       </NavLink>
-      <NavLink activeClassName="active" to="./downloads/resume.pdf">
+      </li>
+      <li>
+      <NavLink activeclassname="active" to="./downloads/resume.pdf">
         Resume
       </NavLink>
-      <NavLink activeClassName="active" to="./Portfolio">
+      </li>
+      <li>
+      <NavLink activeclassname="active" to="./Portfolio">
         Portfolio
       </NavLink>
-      <NavLink activeClassName="active" to="./Contact">
+      </li>
+      <li>
+      <NavLink activeclassname="active" to="./Contact">
         Contact
       </NavLink>
+      </li>
+      </ul>
     </nav>
-    </header>
+    
   );
 }
 
