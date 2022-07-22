@@ -3,12 +3,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from './components/About';
 import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
 import ContactForm from './components/Contact';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
 import Home from './components/Home';
 
-import './App.css';
 
 export default function App() {
 
@@ -26,6 +26,9 @@ export default function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
+              <Link to="/Resume">Resume</Link>
+            </li>
+            <li>
               <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
@@ -35,6 +38,8 @@ export default function App() {
         </nav>
         <Routes>
           <Route path="/about" element={<About />}>
+          </Route>
+          <Route path="/resume" element={<Resume />}>
           </Route>
           <Route path="/portfolio" element={<Portfolio />}>
           </Route>
